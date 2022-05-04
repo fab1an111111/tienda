@@ -24,14 +24,55 @@ img {
 
 }
 
-.main-nav {
-    display:none;
-}
-
 .main-header__container {
     display:flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/*Estilo de menu */
+
+.main-nav {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+    z-index: 999999;
+    
+
+}
+
+.menu {
+    position: absolute;
+    top: 210px;
+    left: 0px;
+    background:#212121;
+    width: 100%;
+    list-style: none;
+    padding:0px;
+    margin:0;
+}
+
+.menu__item {
+    text-align:center;
+    margin: auto;
+}
+
+.menu__link {
+    padding:20px;
+    color:white;
+    text-decoration: none;
+    position:relative;
+    display:block;
+}
+
+.menu__link:hover {
+    background:white;
+    color: #212121;
+}
+
+.mostrar{
+    opacity: 1;
+    visibility: visible;
 }
 
 .icon-menu {
@@ -40,6 +81,7 @@ img {
     display: block;
     padding: 10px 20px;
     cursor: pointer;
+    margin-left:auto;
 }
 
 .main-header__btn {
@@ -53,6 +95,7 @@ img {
 .main-header__input{
     display:block;
     padding: 10px;
+    width: 50%;
 }
 
 .main {
@@ -155,7 +198,13 @@ img {
     text-align: center;
     text-decoration: none;
     width: 150px;
-    margin: 10px auto;
+    margin: 20px auto;
+    transition: all 0.5s;
+}
+
+.btn-shop:hover {
+    background: #FF4E00;
+    color:white;
 }
 
 /* estilos de productos */
@@ -292,13 +341,22 @@ img {
     color: #333;
 }
 
+.btn-shop:hover {
+    color:white;
+}
+
 .main-footer {
-    background: #1b1919;
+    background: #151515;
     color:white;
     padding: 20px 20px;
 }
 
-.footer {
+.footer__title {
+    border-bottom: 1px dotted #555;
+    padding-bottom: 20px;
+}
+
+.footer__txt {
     color: #555;
 }
 
@@ -307,4 +365,33 @@ img {
     text-decoration: none;
     display:block;
     padding: 10px 0;
+}
+
+.footer__input {
+    background: #151515;
+    width: 100%;
+    display: block;
+    padding: 20px;
+    border: 1px solid #555;
+}
+
+.copy {
+    color: #555;
+}
+
+/* Estilos para tablet*/
+
+@media screen and (min-width: 768px) {
+    .slider {
+        height: 400px;
+    }
+    .edito__item {
+        height:250px;
+    }
+}
+
+/* Estilo para web */
+
+@media screen and (min-width: 1024px) {
+
 }
